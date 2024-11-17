@@ -26,4 +26,15 @@ Também é necessário inserir a variável de TTY do GPG no bash_profile.
 
 ### Configurando o GIT para assinar os commits e as tags
 ```git config --global commit.gpgsing true```
+
 ```git config --global tag.gpgsign true```
+
+### Guardar senha para que não fique pedindo a senha todas as vezes
+```vim ~/.gnupg/gpg.conf```
+
+Aqui você cria um arquivo e dentro dele insere ```use-agent```, salve o arquivo e volte ao terminal.
+
+Depois rode o agente com o comando ```gpgconf --launch gpg-agent```
+
+Pronto, agora não será mais necessário ficar inserindo a senha a todo o tempo. Enquanto o agente estiver rodando, sua senha será salva e não será necessário inser-la a cada commit.
+
