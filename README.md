@@ -64,3 +64,14 @@ Você perceberá que uma nova chamve com o nome *unknowns* será criada.
 Agora, para tornar essa chave como confiável selecione a chave 2: ```uid 2``` isso selecionará a chave 2. Depois digite ```trust``` e um grupo de opções será apresentado para que você possa dizer o quão confiável é esta nova chave. O número *5* torna a chave *ultimate*. Depois será necessário salvar com o comando ```save``` e pronto, novo email inserido com sucesso!
 
 Digitando novamente ``` gpg --edit-key GPG_Key_Id``` você perceberá que agora ambos os perfis estão como *ultimate*
+
+# Templates para PRs
+
+Para criar um template de Pull Request, basta procurar um modelo que seja do seu agrado, adaptar o modelo ao seu padrão de trabalho e agora precisamos fazer algumas configurações.
+
+### Criando Diretório .github
+É necessário criar um diretório chamado *.github*. Dentro deste diretório, vamos criar um arquivo de README chamado *PULL_REQUEST_TEMPLATE.md*
+
+Colar o texto dentro do arquivo de pull_request_template.
+
+Salve e faça o commit do arquivo, depois faça o push do arquivo.
