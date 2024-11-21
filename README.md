@@ -75,3 +75,25 @@ Para criar um template de Pull Request, basta procurar um modelo que seja do seu
 Colar o texto dentro do arquivo de pull_request_template.
 
 Salve e faça o commit do arquivo, depois faça o push do arquivo.
+
+# CODE OWNER
+### Justificativa
+Quando estamos trabalhando em times, é comum que tenhamo pessoas especializadas em determinadas linguagens ou mesmo em determinados módulos, seja porque o mesmo é o arquiteto, ou porque é o mais velho, ou ainda porque foi o criador, não importa, o ponto é que sempre teremos alguém que conhece muito de uma determinada parte do código ou expert em uma linguagem. 
+
+A questão é, quando precisamos fazer um code review, faz sentido entregar um code review de um código python a um dev C#? Ou ainda, faz sentido entregar um code review de um módulo do backend a um dev frontend?
+
+A ideia de se trabalhar com codeowner é justamente fixamos a responsabilidade de revisão a pessoas que façam sentido.
+
+### Preparando
+Dentro do diretório *.github* devemos criar um arquivo chamado *CODEOWNERS*
+
+Dentro deste arquivo, configuramos quais arquivos serão revisados por quem... Veja um exemplo.
+
+```
+*.py @EricGPTI
+```
+O que acabamos de fazer foi dizer que, todo arquivo .py deverá ter como reviewer o colaborador que tem o perfil chamado @EricGPTI.
+
+A partir de agora, toda vez que fizermos um *Pull Request*, será obrigatório a revisão por este colaborador. 
+
+O mesmo vale para diretórios.
